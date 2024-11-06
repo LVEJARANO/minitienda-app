@@ -5,7 +5,7 @@
     <h1>Gestion de productos</h1>
     <div>
         <%--Id--%>
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:HiddenField ID="HFProductId" runat="server" />
 
         <%--Codigo--%>
         <asp:Label ID="Label1" runat="server" Text="Ingrese el codigo"></asp:Label>
@@ -36,12 +36,26 @@
         <asp:DropDownList ID="DDLProviders" runat="server"></asp:DropDownList>
         <br />
 
-        <asp:Button ID="BtnSave" runat="server" Text="Guardar" />
-        <asp:Button ID="BtnUpdate" runat="server" Text="Actualizar"/>
+        <asp:Button ID="BtnSave" runat="server" Text="Guardar" OnClick="BtnSave_Click" />
+        <asp:Button ID="BtnUpdate" runat="server" Text="Actualizar" OnClick="BtnUpdate_Click"/>
         <asp:Label ID="LblMsj" runat="server" Text=""></asp:Label>
         <br />
 
         <%--Lista de Productos--%>
-        <asp:GridView ID="GVProducts" runat="server"></asp:GridView>
+        <asp:GridView ID="GVProducts" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GVProducts_SelectedIndexChanged">
+            <Columns>
+                <asp:BoundField DataField="pro_id" HeaderText="Id" />
+                <asp:BoundField DataField="pro_codigo" HeaderText="Codigo" />
+                <asp:BoundField DataField="pro_descripcion" HeaderText="Descripcion" />
+                <asp:BoundField DataField="pro_cantidad" HeaderText="Cantidad" />
+                <asp:BoundField DataField="pro_precio" HeaderText="Precio" />
+                <asp:BoundField DataField="tbl_categoria_cat_id" HeaderText="FkCategoria" />
+                <asp:BoundField DataField="cat_descripcion" HeaderText="Categoria" />
+                <asp:BoundField DataField="tbl_proveedor_prov_id" HeaderText="FkProveedor" />
+                <asp:BoundField DataField="prov_nombre" HeaderText="Proveedor" />
+                <asp:CommandField ShowSelectButton="True" />
+                <asp:CommandField ShowDeleteButton="True" />
+            </Columns>
+        </asp:GridView>
     </div>
 </asp:Content>
