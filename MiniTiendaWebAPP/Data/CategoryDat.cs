@@ -53,7 +53,7 @@ namespace Data
             objSelectCmd.CommandText = "spInsertCategory"; //nombre del procedimiento almacenado
             objSelectCmd.CommandType = CommandType.StoredProcedure;
             objSelectCmd.Parameters.Add("p_description", MySqlDbType.VarString).Value = _description;
-            objSelectCmd.Parameters.Add("p_fecha", MySqlDbType.DateTime).Value = _fecha;
+            objSelectCmd.Parameters.Add("p_date", MySqlDbType.DateTime).Value = _fecha;
 
             try
             {
@@ -73,7 +73,7 @@ namespace Data
         }
 
         //Metodo para actualizar una Categoria
-        public bool updateCategory(int _idCategory, string _description)
+        public bool updateCategory(int _idCategory, string _description, DateTime _fecha)
         {
             bool executed = false;
             int row;
@@ -84,6 +84,7 @@ namespace Data
             objSelectCmd.CommandType = CommandType.StoredProcedure;
             objSelectCmd.Parameters.Add("p_id", MySqlDbType.Int32).Value = _idCategory;
             objSelectCmd.Parameters.Add("p_description", MySqlDbType.VarString).Value = _description;
+            objSelectCmd.Parameters.Add("p_date", MySqlDbType.Date).Value = _fecha;
 
             try
             {

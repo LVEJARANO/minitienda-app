@@ -4,25 +4,57 @@
 
 <html>
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Mini Tienda</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
+        <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">MiniTienda</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="Inicio.aspx">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="WFCategories.aspx">Categorias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Proveedores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="WFProducts.aspx">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Proveedores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Usuarios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Cerrar sesion</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
         <%--Aqui va lo que se repite en los demas formularios--%>
-        <a href="Inicio.aspx">Inicio</a>
-        <a href="#">Categorias</a>
-        <a href="#">Proveedores</a>
-        <a href="WFProducts.aspx">Productos</a>
-        <a href="#">Usuarios</a>
-        <a href="#">Cerrar sesion</a>
+
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
     </form>
     <%--Pie de pagina--%>
+    <script src="resources/js/bootstrap.bundle.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
 </body>
 </html>

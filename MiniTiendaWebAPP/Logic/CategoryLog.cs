@@ -28,9 +28,9 @@ namespace Logic
             return objCat.saveCategory(_description, _fecha);
         }
         //Metodo para actualizar una Categoria
-        public bool updateCategory(int _idCategory, string _description)
+        public bool updateCategory(int _idCategory, string _description, DateTime _fecha)
         {
-            return objCat.updateCategory(_idCategory, _description);
+            return objCat.updateCategory(_idCategory, _description, _fecha);
         }
         //Metodo para borrar una Categoria
         public bool deleteCategory(int _idCategory)

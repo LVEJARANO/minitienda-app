@@ -65,7 +65,30 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Inicio.aspx" />
+    <Content Include="resources\css\bootstrap-grid.css" />
+    <Content Include="resources\css\bootstrap-grid.min.css" />
+    <Content Include="resources\css\bootstrap-grid.rtl.css" />
+    <Content Include="resources\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="resources\css\bootstrap-reboot.css" />
+    <Content Include="resources\css\bootstrap-reboot.min.css" />
+    <Content Include="resources\css\bootstrap-reboot.rtl.css" />
+    <Content Include="resources\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="resources\css\bootstrap-utilities.css" />
+    <Content Include="resources\css\bootstrap-utilities.min.css" />
+    <Content Include="resources\css\bootstrap-utilities.rtl.css" />
+    <Content Include="resources\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="resources\css\bootstrap.css" />
+    <Content Include="resources\css\bootstrap.min.css" />
+    <Content Include="resources\css\bootstrap.rtl.css" />
+    <Content Include="resources\css\bootstrap.rtl.min.css" />
+    <Content Include="resources\js\bootstrap.bundle.js" />
+    <Content Include="resources\js\bootstrap.bundle.min.js" />
+    <Content Include="resources\js\bootstrap.esm.js" />
+    <Content Include="resources\js\bootstrap.esm.min.js" />
+    <Content Include="resources\js\bootstrap.js" />
+    <Content Include="resources\js\bootstrap.min.js" />
     <Content Include="Web.config" />
+    <Content Include="WFCategories.aspx" />
     <Content Include="WFProducts.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -84,6 +107,13 @@
       <DependentUpon>Main.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WFCategories.aspx.cs">
+      <DependentUpon>WFCategories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFCategories.aspx.designer.cs">
+      <DependentUpon>WFCategories.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WFProducts.aspx.cs">
       <DependentUpon>WFProducts.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -95,6 +125,28 @@
   <ItemGroup>
     <Content Include="Main.Master" />
     <None Include="packages.config" />
+    <Content Include="resources\css\bootstrap-grid.css.map" />
+    <Content Include="resources\css\bootstrap-grid.min.css.map" />
+    <Content Include="resources\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="resources\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="resources\css\bootstrap-reboot.css.map" />
+    <Content Include="resources\css\bootstrap-reboot.min.css.map" />
+    <Content Include="resources\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="resources\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="resources\css\bootstrap-utilities.css.map" />
+    <Content Include="resources\css\bootstrap-utilities.min.css.map" />
+    <Content Include="resources\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="resources\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="resources\css\bootstrap.css.map" />
+    <Content Include="resources\css\bootstrap.min.css.map" />
+    <Content Include="resources\css\bootstrap.rtl.css.map" />
+    <Content Include="resources\css\bootstrap.rtl.min.css.map" />
+    <Content Include="resources\js\bootstrap.bundle.js.map" />
+    <Content Include="resources\js\bootstrap.bundle.min.js.map" />
+    <Content Include="resources\js\bootstrap.esm.js.map" />
+    <Content Include="resources\js\bootstrap.esm.min.js.map" />
+    <Content Include="resources\js\bootstrap.js.map" />
+    <Content Include="resources\js\bootstrap.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -107,6 +159,9 @@
       <Project>{352d1869-8c5f-4b3e-b47b-f13f2a79dd44}</Project>
       <Name>Logic</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="resources\images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
